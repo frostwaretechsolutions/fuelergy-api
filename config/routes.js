@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +45,6 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-
+  'get  /api/stations/:lat/:lng/:dist/:type/:sort/:apiKey': 'ApplicationController.stations',
+  'post /api/update/:apiKey':                               'ApplicationController.update'
 };
