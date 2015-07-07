@@ -8,10 +8,8 @@
 var request = require('request');
 module.exports = {
   update: function(req, res){
-    request({
-      method: 'POST',
-      url: 'http://api.mygasfeed.com/locations/prices/' + req.param('apiKey') + '.json',
-      body: {
+    request.post('http://api.mygasfeed.com/locations/price/' + req.param('apiKey') + '.json',{
+      form: {
         stationid: req.param('stationid'),
         fueltype:  req.param('fueltype'),
         price:     req.param('price')
