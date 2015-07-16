@@ -19,6 +19,7 @@
     "grunt-sails-linker": "~0.9.5",
     "grunt-sync": "~0.0.4",
     "include-all": "~0.1.3",
+    "lodash": "^3.10.0",
     "nconf": "^0.7.1",
     "rc": "~0.5.0",
     "request": "^2.58.0",
@@ -31,7 +32,8 @@
     "start": "node app.js",
     "pretest": "./node_modules/.bin/jshint --reporter=./node_modules/jshint-stylish api",
     "test": "./node_modules/.bin/mocha -R spec ./test/api --recursive --check-leaks",
-    "test-cov": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u exports spec test/**/**/*"
+    "test-cov": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- test/api -R spec --recusrive --check-leaks",
+    "win-cov": "./node_modules/.bin/istanbul cover  ./node_modules/mocha/bin/_mocha -- test/api/ -R spec --recursive --check-leaks"
   },
   "main": "app.js",
   "repository": {
