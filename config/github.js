@@ -11,7 +11,7 @@ var github = new Github({
   }
 });
 
-var credentials = process.env.GITHUB || nconf.get('github');
+var credentials = process.env.GITHUB ? JSON.parse(process.env.GITHUB) : nconf.get('github');
 
 github.authenticate(credentials);
 
