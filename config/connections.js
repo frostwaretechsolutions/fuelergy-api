@@ -25,6 +25,6 @@ nconf
 module.exports.connections = {
   mongo: {
     adapter: 'sails-mongo',
-    url: process.env.MONGOLAB_URI || nconf.get('mongo_url')
+    url: process.env.MONGOLAB_URI || nconf.get('mongo:url')
   }
 };

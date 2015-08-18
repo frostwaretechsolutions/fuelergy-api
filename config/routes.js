@@ -45,6 +45,7 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+  'post /api/contact':                                      'ContactController.contact',
   'get  /api/stations/:lat/:lng/:dist/:type/:sort/:apiKey': 'ApplicationController.stations',
   'post /api/update/:apiKey':                               'ApplicationController.update',
   'post /api/login':                                        'UserController.login',
