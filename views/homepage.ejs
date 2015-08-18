@@ -1,5 +1,5 @@
 <div class='container-fluid'>
-  <div class='row header'>
+  <div class='row header' ng-controller='HomeCtrl'>
     <nav class="navbar navbar-inverse navbar-no-bg">
       <div class="container">
         <div class="navbar-header">
@@ -9,18 +9,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!--
-          <a class="navbar-brand" href="#">
-            FUELERGY
-          </a>
-          -->
         </div>
 
         <div class="collapse navbar-collapse" id="fuelergy-navbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Features</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#features" du-smooth-scroll>Features</a></li>
+            <li><a href="#about" du-smooth-scroll>About</a></li>
+            <li><a href="#contact" du-smooth-scroll>Contact</a></li>
           </ul>
         </div>
       </div>
@@ -40,8 +35,8 @@
               <p>Filling up your gas tank no longer means emptying your wallets. Small gas prices. Big pockets. #Fuelergy #GetPumped</p>
             </div>
             <div class='download'>
-              <a class='btn btn-info'>Download it</a>
-              <a class='btn btn-default'>Learn More</a>
+              <a class='btn btn-info' href='{{ link }}'>Download it</a>
+              <a class='btn btn-default' href='#features' du-smooth-scroll>Learn More</a>
             </div>
             <div class='platforms'>
               <i class='fa fa-apple'></i>
@@ -55,8 +50,8 @@
               <p>Filling up your gas tank no longer means emptying your wallets. Small gas prices. Big pockets. #Fuelergy #GetPumped</p>
             </div>
             <div class='download'>
-              <a class='btn btn-info'>Download it</a>
-              <a class='btn btn-default'>Learn More</a>
+              <a class='btn btn-info' href='{{ link }}'>Download it</a>
+              <a class='btn btn-default' href='#features' du-smooth-scroll>Learn More</a>
             </div>
             <div class='platforms'>
               <i class='fa fa-apple'></i>
@@ -68,7 +63,7 @@
       </div>
     </div>  
   </div>
-  <div class='row features'>
+  <div class='row features' id='features'>
     <div class='container'>
       <div class='row-fluid'>
         <div class='col-xs-12 text-center'>
@@ -116,7 +111,7 @@
       </div>
     </div>
   </div>
-  <div class='row roadmap'>
+  <div class='row roadmap' id='about'>
     <div class='container'>
       <div class='row-fluid text-center'>
         <div class='col-xs-12'>
@@ -145,7 +140,7 @@
       </div>
     </div>
   </div>
-  <div class='row contact' ng-controller='ContactCtrl'>
+  <div class='row contact' ng-controller='ContactCtrl' id='contact'>
     <div class='container'>
       <div class='row-fluid text-center'>
         <div class='col-xs-12'>

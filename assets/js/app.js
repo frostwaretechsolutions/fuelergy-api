@@ -1,21 +1,51 @@
 (function(){
   'use strict';
-  var app = angular.module('fuelergy', ['ui.bootstrap']);
+  var app = angular.module('fuelergy', ['ui.bootstrap', 'duScroll']);
 
   /* CONTROLLERS */
 
   /* injects */
   var injects = {
+    home: [
+      '$scope',
+      HomeCtrl
+    ],
     contact: [
       '$scope',
       '$http',
-      ContactController
+      ContactCtrl
     ]
   };
   /* end injects */
 
   /* controllers */
-  function ContactController($scope, $http){
+
+  function HomeCtrl($scope){
+    function init(){
+      $scope.links = {
+        ios: 'http://itunes.com/apps/fuelergy',
+        android: 'http://play.google.com/store/apps/details?id=fuelergy',
+        windows: 'https://www.microsoft.com/store/apps/fuelergy'
+      }
+      var ua = navigator.userAgent;
+
+      if(/Android/i.test(ua)){
+        $scope.link = $scope.links.android;
+      } else if(/iPhone|iPad|iPod/i.test(ua)){
+        $scope.link = $scope.links.ios;
+      } else if(/IEMobile/i.test(ua)){
+        $scope.link = $scope.links.windows;
+      } else {
+        $scope.link = $scope.links.ios;
+      }
+    }
+
+    $scope.init = init;
+
+    $scope.init();
+  }
+
+  function ContactCtrl($scope, $http){
     function init(){
       $scope.alerts = [];
     }
@@ -42,6 +72,7 @@
   /* end controllers */
 
   /* intialize */
+  app.controller('HomeCtrl', injects.home);
   app.controller('ContactCtrl', injects.contact);
   /* end intialize */
 
