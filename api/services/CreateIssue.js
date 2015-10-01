@@ -9,7 +9,7 @@
       body: req.param('email')  + ' has submitted the following \n' + req.param('message'),
       labels: ['website-contact']
     }, function(err, issue){
-      err ? cb(err) : cb();
+      err ? cb(err) : cb(null, issue);
     });
   }
 
