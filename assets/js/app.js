@@ -10,6 +10,10 @@
       '$scope',
       HomeCtrl
     ],
+    about: [
+      '$scope',
+      AboutCtrl
+    ],
     contact: [
       '$scope',
       '$http',
@@ -45,6 +49,30 @@
     $scope.init();
   }
 
+  function AboutCtrl($scope){
+    function init(){
+      $scope.users = [
+        {
+          name: 'M. Elliot Frost',
+          pic: 'elliot',
+          title: 'Frostware CEO',
+          handle: 'melliotfrost',
+          description: 'Lead developer, founder, CEO... Elliot is fully invested in bringing the freshest tech innovations and ideas to the table. His creativity, curiosity, and experience are the catalysts that allow Fuelergy to adapt to stay on the cutting edge.'
+        },{
+          name: 'Kyle C. Goobred',
+          pic: 'kyle',
+          title: 'Frostware CFO',
+          handle: 'GBred65',
+          description: 'Marketer, analyst, CFO... Kyle is responsible for the business plan Fuelergy operates within. His passion for management, marketing, and customer satisfaction drive him in his work as part of the Fuelergy Team.'
+        }
+      ];
+    }
+
+    $scope.init = init;
+
+    $scope.init();
+  }
+
   function ContactCtrl($scope, $http){
     function init(){
       $scope.alerts = [];
@@ -73,6 +101,7 @@
 
   /* intialize */
   app.controller('HomeCtrl', injects.home);
+  app.controller('AboutCtrl', injects.about);
   app.controller('ContactCtrl', injects.contact);
   /* end intialize */
 
