@@ -132,7 +132,9 @@
             <h3>{{ user.name }}</h3>
           </div>
           <div class='social'>
-            <a href='https://twitter.com/{{ user.handle }}' target='_blank'><i class='fa fa-twitter fa-2x'></i></a>
+            <a href='https://twitter.com/{{ user.handle }}' target='_blank' class='twitter'><i class='fa fa-twitter fa-2x'></i></a>
+            <a href='https://linkedin.com/in/{{user.linkedin}}' target='_blank' class='linkedin'><i class='fa fa-linkedin fa-2x'></i></a>
+            <a href='https://github.com/{{user.github}}' target='_blank' class='github'><i class='fa fa-github fa-2x'></i></a>
           </div>
           <div class='description well'>
             {{ user.description }}

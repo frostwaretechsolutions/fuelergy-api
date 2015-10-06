@@ -57,12 +57,16 @@
           pic: 'elliot',
           title: 'Frostware CEO',
           handle: 'melliotfrost',
+          linkedin: 'melliotfrost',
+          github: 'frostme',
           description: 'Lead developer, founder, CEO... Elliot is fully invested in bringing the freshest tech innovations and ideas to the table. His creativity, curiosity, and experience are the catalysts that allow Fuelergy to adapt to stay on the cutting edge.'
         },{
-          name: 'Kyle C. Goobred',
+          name: 'Kyle C. Goodbred',
           pic: 'kyle',
           title: 'Frostware CFO',
           handle: 'GBred65',
+          linkedin: 'kylegoodbred',
+          github: 'kgbred65',
           description: 'Marketer, analyst, CFO... Kyle is responsible for the business plan Fuelergy operates within. His passion for management, marketing, and customer satisfaction drive him in his work as part of the Fuelergy Team.'
         }
       ];
