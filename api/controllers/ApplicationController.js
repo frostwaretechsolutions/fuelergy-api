@@ -14,8 +14,14 @@
       res.json(results);
     });
   }
+
+  function howTo(req, res){
+
+  }
+
   module.exports = {
     update: update,
-    stations: stations
+    stations: stations,
+    howTo: howTo
   };
 }());
