@@ -14,9 +14,17 @@
     });
   }
 
+  function create(req, res){
+    UserCreate.call(req, function(err, user){
+      if(err) return res.negotiate(err);
+      res.json(user);
+    });
+  }
+
   module.exports = {
     login:  login,
-    update: update
+    update: update,
+    create: create
   };
 }());
 
