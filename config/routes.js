@@ -49,5 +49,6 @@ module.exports.routes = {
   'get  /api/stations/:lat/:lng/:dist/:type/:sort/:apiKey': 'ApplicationController.stations',
   'post /api/update/:apiKey':                               'ApplicationController.update',
   'post /api/login':                                        'UserController.login',
-  'put  /api/user/:id':                                     'UserController.update'
+  'put  /api/user/:id':                                     'UserController.update',
+  'post /api/user':                                         'UserController.create'
 };

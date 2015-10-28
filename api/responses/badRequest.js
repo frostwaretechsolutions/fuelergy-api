@@ -28,6 +28,7 @@ module.exports = function badRequest(data, options) {
   // Log error to console
   if (data !== undefined) {
     sails.log.verbose('Sending 400 ("Bad Request") response: \n',data);
+    if(data.status) res.status(data.status);
   }
   else sails.log.verbose('Sending 400 ("Bad Request") response');
 
