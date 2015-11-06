@@ -45,10 +45,17 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+  // General
   'post /api/contact':                                      'ContactController.contact',
   'get  /api/stations/:lat/:lng/:dist/:type/:sort/:apiKey': 'ApplicationController.stations',
   'post /api/update/:apiKey':                               'ApplicationController.update',
+
+  // User
   'post /api/login':                                        'UserController.login',
   'put  /api/user/:id':                                     'UserController.update',
-  'post /api/user':                                         'UserController.create'
+  'post /api/user':                                         'UserController.create',
+
+
+  // Activity
+  'post /api/activity':                                     'ActivityController.create'
 };
