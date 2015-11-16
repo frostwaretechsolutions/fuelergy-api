@@ -21,7 +21,6 @@
 
 var nconf = require('nconf');
 
-nconf
 module.exports.connections = {
   mongo: {
     adapter: 'sails-mongo',

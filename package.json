@@ -6,6 +6,7 @@
   "keywords": [],
   "dependencies": {
     "ejs": "~0.8.4",
+    "feedparser": "^1.1.4",
     "github": "^0.2.4",
     "grunt": "0.4.2",
     "grunt-contrib-clean": "~0.5.0",
@@ -21,13 +22,17 @@
     "grunt-sync": "~0.0.4",
     "include-all": "~0.1.3",
     "lodash": "^3.10.0",
+    "mongodb": "^2.0.48",
     "nconf": "^0.7.1",
     "node-slack": "0.0.7",
     "rc": "~0.5.0",
     "request": "^2.58.0",
     "sails": "~0.11.0",
     "sails-disk": "~0.10.0",
-    "sails-mongo": "^0.11.2"
+    "sails-hook-jobs": "^0.1.3",
+    "sails-mongo": "^0.11.2",
+    "sendgrid": "^1.9.2",
+    "ursa": "^0.9.1"
   },
   "scripts": {
     "debug": "node debug app.js",

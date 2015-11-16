@@ -57,5 +57,10 @@ module.exports.routes = {
 
 
   // Activity
-  'post /api/activity':                                     'ActivityController.create'
+  'post /api/activity':                                     'ActivityController.create',
+
+  // Newsletter
+  'post /newsletter':                                       'NewsletterController.send',
+  'post /subscribe':                                        'NewsletterController.subscribe',
+  'get /unsubscribe/:email/:key':                           'NewsletterController.unsubscribe'
 };
