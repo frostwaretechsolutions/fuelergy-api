@@ -14,17 +14,17 @@
             Weebly.call(function(err, items){
               BlogPost.findOne({ guid: items[0].guid }, function(err, post){
                 if(post) {
-                  console.log('Weebly Already Sent');
+                  sails.log.info('Weebly Already Sent');
                   done()
                 } else {
                   BlogPost.create({ guid: items[0].guid }, function(err, post){
                     if(err) {
-                      console.error(err);
+                      sails.log.error(err);
                       done();
                     } else {
                       NewsletterSend.call(function(err){
-                        if(err) console.error('Weebly Not Sent');
-                        console.log('Weebly Sent');
+                        if(err) sails.log.error('Weebly Not Sent');
+                        sails.log.info('Weebly Sent');
                         done();
                       });
                     }
