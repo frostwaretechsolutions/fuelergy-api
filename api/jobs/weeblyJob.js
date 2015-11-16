@@ -7,7 +7,7 @@
         name: 'Weebly',
 
         // method can be 'every <interval>', 'schedule <when>' or now
-        frequency: 'every 5 seconds',
+        frequency: 'every 6 hours',
 
         // execute job
         run: function(job, done) {
