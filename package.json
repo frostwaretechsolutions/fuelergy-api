@@ -1,7 +1,7 @@
 {
   "name": "fuelergy-api",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.2.0",
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
@@ -46,6 +46,9 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/anonymous node/sails user/fuelergy-api.git"
+  },
+  "engines": {
+    "node": "4.1.1"
   },
   "author": "anonymous node/sails user",
   "license": "",
