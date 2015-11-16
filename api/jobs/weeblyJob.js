@@ -23,8 +23,12 @@
                       done();
                     } else {
                       NewsletterSend.call(function(err){
-                        if(err) sails.log.error('Weebly Not Sent');
-                        sails.log.info('Weebly Sent');
+                        if(err) {
+                          sails.log.error('Weebly Not Sent');
+                          sails.log.error(err);
+                        } else {
+                          sails.log.info('Weebly Sent');
+                        }
                         done();
                       });
                     }
